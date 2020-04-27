@@ -41,7 +41,7 @@ const config: WebsiteConfig = {
   coverImage: 'img/blog-cover.jpg',
   logo: 'img/logo.png',
   lang: 'en',
-  siteUrl: 'https://gatsby-casper.netlify.com',
+  siteUrl: 'https://devhoot.ooo',
   facebook: 'https://www.facebook.com/DevHoot-248214129276018/',
   twitter: 'https://twitter.com/Dev_Hoot',
   showSubscribe: true,

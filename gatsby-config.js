@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'DevHoot',
     description: 'A Programming Blog by Imran Khan',
-    siteUrl: 'https://gatsby-casper.netlify.com', // full path to blog - no ending slash
+    siteUrl: 'https://devhoot.ooo', // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
@@ -56,7 +56,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-casper.netlify.com',
+        siteUrl: 'https://devhoot.ooo',
       },
     },
     'gatsby-plugin-emotion',
