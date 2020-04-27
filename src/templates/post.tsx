@@ -206,7 +206,7 @@ export interface PageContext {
   };
 }
 
-const PageTemplate: React.FC<PageTemplateProps> = props => {
+const PageTemplate: React.FC<PageTemplateProps> = (props) => {
   const post = props.data.markdownRemark;
   let width = '';
   let height = '';
@@ -227,8 +227,11 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
         <meta property="og:title" content={post.frontmatter.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:url" content={config.siteUrl + props.pathContext.slug} />
-        {(post.frontmatter.image && post.frontmatter.image.childImageSharp) && (
-          <meta property="og:image" content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`} />
+        {post.frontmatter.image && post.frontmatter.image.childImageSharp && (
+          <meta
+            property="og:image"
+            content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`}
+          />
         )}
         <meta property="article:published_time" content={post.frontmatter.date} />
         {/* not sure if modified time possible */}
@@ -237,24 +240,34 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
           <meta property="article:tag" content={post.frontmatter.tags[0]} />
         )}
 
-        {config.facebook && <meta property="article:publisher" content={config.facebook} />}
-        {config.facebook && <meta property="article:author" content={config.facebook} />}
+        {/* {config.facebook && <meta property="article:publisher" content={config.facebook} />}
+        {config.facebook && <meta property="article:author" content={config.facebook} />} */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.frontmatter.title} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
-        {(post.frontmatter.image && post.frontmatter.image.childImageSharp) && (
-          <meta name="twitter:image" content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`} />
+        {post.frontmatter.image && post.frontmatter.image.childImageSharp && (
+          <meta
+            name="twitter:image"
+            content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`}
+          />
         )}
         <meta name="twitter:label1" content="Written by" />
         <meta name="twitter:data1" content={post.frontmatter.author.id} />
         <meta name="twitter:label2" content="Filed under" />
         {post.frontmatter.tags && <meta name="twitter:data2" content={post.frontmatter.tags[0]} />}
-        {config.twitter && <meta name="twitter:site" content={`@${config.twitter.split('https://twitter.com/')[1]}`} />}
-        {config.twitter && <meta
-          name="twitter:creator"
-          content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-        />}
+        {config.twitter && (
+          <meta
+            name="twitter:site"
+            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
+          />
+        )}
+        {config.twitter && (
+          <meta
+            name="twitter:creator"
+            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
+          />
+        )}
         {width && <meta property="og:image:width" content={width} />}
         {height && <meta property="og:image:height" content={height} />}
       </Helmet>
@@ -273,20 +286,24 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                   <PostFullMetaDate dateTime={post.frontmatter.date}>
                     {post.frontmatter.userDate}
                   </PostFullMetaDate>
-                  {post.frontmatter.tags &&
-                    post.frontmatter.tags.length > 0 && (
-                      <>
-                        <DateDivider>/</DateDivider>
-                        <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
-                          {post.frontmatter.tags[0]}
-                        </Link>
-                      </>
+                  {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+                    <>
+                      <DateDivider>/</DateDivider>
+                      <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
+                        {post.frontmatter.tags[0]}
+                      </Link>
+                    </>
                   )}
                 </PostFullMeta>
                 <PostFullTitle>{post.frontmatter.title}</PostFullTitle>
               </PostFullHeader>
 
-              {(post.frontmatter.image && post.frontmatter.image.childImageSharp) && (
+              <PostFullFooter>
+                <AuthorCard author={post.frontmatter.author} />
+                <PostFullFooterRight authorId={post.frontmatter.author.id} />
+              </PostFullFooter>
+
+              {post.frontmatter.image && post.frontmatter.image.childImageSharp && (
                 <PostFullImage>
                   <Img
                     style={{ height: '100%' }}

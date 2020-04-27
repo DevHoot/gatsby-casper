@@ -1,15 +1,32 @@
-- id: Ghost
-  avatar: avatars/ghost.png
-  bio: The professional publishing platform
-  twitter: TryGhost
-  facebook: ghost
-  website: https://ghost.org/
-  location: On a plane
-- id: Another Author
-  avatar: avatars/ghost.png
-  bio: This is another test author with a profile background image
-  twitter: TryGhost
-  facebook: ghost
-  website: https://ghost.org/
-  location: On a plane
-  profile_image: img/alex-knight-326705-unsplash.jpg
+- id: Imran Khan
+  avatar: avatars/imran.jpg
+  bio: Maker, Curious Cat. Loves art, science, philosophy, politics.
+  twitter: EhThing
+  # facebook:
+  website: http://devhoot.ooo/author/imran-khan/
+  location: India
+  profile_image: img/author_cover.jpg
+- id: Son NK
+  avatar: avatars/sonnk.jpg
+  bio: Founder of SimpleLogin, the open source solution to protect your email address.
+  twitter: nguyenkims
+  # facebook:
+  website: https://simplelogin.io/
+  location: Earth
+  profile_image: img/author_cover.jpg
+- id: Joel Varty
+  avatar: avatars/joel.jpg
+  bio: President Agility CMS
+  twitter: joelvarty
+  # facebook:
+  website: https://agilitycms.com/
+  location: Earth
+  profile_image: img/author_cover.jpg
+- id: Nebojsa Radakovic
+  avatar: avatars/nebojsa.jpg
+  bio: Bejamas guy
+  twitter: CookieDuster_N
+  # facebook:
+  website: https://bejamas.io/blog/jamstack-seo-guide/
+  location: Earth
+  profile_image: img/author_cover.jpg
