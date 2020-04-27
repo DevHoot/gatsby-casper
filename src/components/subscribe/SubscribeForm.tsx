@@ -85,27 +85,20 @@ const FormGroup = styled.div`
 const SubscribeForm: React.FC = () => {
   return (
     <form
-      noValidate
       css={SubscribeFormStyles}
-      action={config.mailchimpAction}
       method="post"
-      id="mc-embedded-subscribe-form"
-      name="mc-embedded-subscribe-form"
-      target="_blank"
+      data-netlify="true"
+      name="subscribe"
     >
       {/* This is required for the form to work correctly  */}
       <FormGroup className="form-group">
         <SubscribeEmail
           className="subscribe-email"
           type="email"
-          name={config.mailchimpEmailFieldName}
-          id={config.mailchimpEmailFieldName}
+          name="email"
           placeholder="youremail@example.com"
         />
       </FormGroup>
-      <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-        <input type="text" name={config.mailchimpName} tabIndex={-1} />
-      </div>
       <SubscribeFormButton type="submit">
         <span>Subscribe</span>
       </SubscribeFormButton>

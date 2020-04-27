@@ -29,6 +29,15 @@ module.exports = {
               wrapperStyle: 'margin-bottom: 1rem',
             },
           },
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              fromHeading: 1,
+              toHeading: 6
+            },
+          },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
@@ -65,7 +74,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-XXXX-Y',
+        trackingId: 'UA-123729548-3',
         // Puts tracking script in the head instead of the body
         head: true,
         // IP anonymization for GDPR compliance
@@ -73,7 +82,6 @@ module.exports = {
         // Disable analytics for users with `Do Not Track` enabled
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
-        exclude: ['/preview/**'],
         // Specifies what percentage of users should be tracked
         sampleRate: 100,
         // Determines how often site speed tracking beacons will be sent

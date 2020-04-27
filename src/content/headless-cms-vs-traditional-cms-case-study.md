@@ -7,6 +7,10 @@ image: img/agilityPost.jpg
 date: '2020-02-11T15:11:55.000Z'
 draft: false
 ---
+## Table of Contents
+
+```toc
+```
 
 You are probably experienced with Wordpress and may be you tried a free version of Headless CMS. Maybe not.
 
@@ -14,25 +18,21 @@ Wordpress is a great tool and if you are mainly building blog-like-looking websi
 
 But if you are like the author of this [article](https://hackernoon.com/this-is-why-wordpress-sucks-and-you-should-probably-stop-using-it-v697y30v7), you might feel that your recent projects push the limits of your CMS. In this case, it might be the time to start learning more about Headless solutions.
 
-![headache devhoot](/assets/img/agilitycms/image1.jpg)
-
 By the time you’re finished reading this article, you will be able to understand what a Headless CMS is, how it is different from Traditional CMS and what are the benefits of switching to Headless CMS. We will use [Wordpress](http://www.wordpress.com) and [Agility CMS](http://www.agilitycms.com/?source=imran) as examples.
 
 So here you go, let’s start some serious learning!
-
-![yoda devhoot](/assets/img/agilitycms/image3.jpg)
 
 Let’s first understand, for the final time, what a Traditional & Headless CMS is.
 
 ## What is Traditional CMS?
 
 In a Traditional CMS, the website (head) is connected to the content.  
-![traditional cms devhoot](/assets/img/agilitycms/image2.png)
+![traditional cms devhoot](https://d33wubrfki0l68.cloudfront.net/d50deed64f8f82760ed40ba968e58995790faeb1/00a29/assets/img/agilitycms/image2.png)
 
 ## What is Headless CMS?
 
 Contrary to a traditional CMS, a headless CMS is entirely decoupled from the presentation layer/frontend, which in this case is the “head”, and the backend is your content repository or known as the “body”. When you separate your content repository “body” from its presentation layer “head,” it becomes a headless CMS.
-![traditional cms devhoot](/assets/img/agilitycms/image5.png)
+![traditional cms devhoot](https://d33wubrfki0l68.cloudfront.net/96f15d19dffbc09588ecc35b1f6eaef34b5a7872/1e0fe/assets/img/agilitycms/image5.png)
 
 There are several benefits to using a headless CMS architecture.
 
@@ -41,8 +41,6 @@ There are several benefits to using a headless CMS architecture.
 Below, we highlight and explain the top ten benefits.
 
 #### 1. Headless CMS is easier, faster, and more flexible to develop on
-
-![faster devhoot](/assets/img/agilitycms/image4.jpg)
 
 Not only are you able to pick your programming language, a headless CMS is API driven so you can build your “head” (presentation layer/frontend) end to end. Your developers can develop the way they’re used to without having to conform to any proprietary development constraints. A single content item can be reused and combined with several different presentation outputs, allowing for projects to be completed faster.
 
@@ -54,8 +52,6 @@ A prime example of a webhook is triggering an email to your user once they have 
 
 Ever felt like your marketing team or client can not wait to start working on content, product descriptions, landing page messaging, and they are waiting for you and nagging you every day?
 
-![faster devhoot](/assets/img/agilitycms/image7.jpg)
-
 A headless CMS is a dream come true for developers. Developers can continue to build websites or mobile applications using any programming language with their favourite tools, frameworks, and own development processes while still allowing full control over the application lifecycle without having to interfere with any CMS code.
 
 Not just that, but developers and editors can also work better together. Editors no longer have to rely heavily on developers to build pages with a custom layout. This promotes an agile way of working, which for projects can mean being finished a lot faster!
@@ -63,8 +59,6 @@ Not just that, but developers and editors can also work better together. Editors
 The result is that not only will the time-to-market be diminished but also a single content item can be reused and combined with a number of different presentations. Developers and editors will be able to work much better together as well rather than in a silo.
 
 #### 3. Easy Integration
-
-![integration devhoot](/assets/img/agilitycms/image6.jpg)
 
 A headless CMS allows easy and secure integrations with any of your existing systems. A developer can code in any preferred language while allowing to use the programming language of the other platform that is being integrated into the CMS.
 
@@ -85,7 +79,6 @@ Architecting a content-first approach makes your system cleaner, more scalable a
 #### 6. Future proof – You never need to build your website from scratch again.
 
 Future-proofing is another significant benefit because you can easily integrate with new technology and innovations, especially when the industry is changing as often as it is.
-![future proof devhoot](/assets/img/agilitycms/image9.jpg)
 
 A headless CMS allows you to future proof your application by separating your presentation layer from your data and logic layer. It allows you to structure your content to make new projects easier for future proofing as well as when re-branding one or more channels, there are literally no technical changes required within the CMS. Developers adopt the headless CMS approach to the parts of their existing stack where it makes sense. They carve out pieces and use APIs to make it all work together.
 
@@ -117,7 +110,7 @@ After the website is built, developers can train editors to create pages, add co
 
 ## Wordpress vs Agility CMS
 
-![agility vs wordpress devhoot](/assets/img/agilitycms/wordpress-vs-agility.png)
+![agility vs wordpress devhoot](https://d33wubrfki0l68.cloudfront.net/1d2c0738368787a949106b2aa9685224a402a4c4/23b8d/assets/img/agilitycms/wordpress-vs-agility.png)
 
 Now let’s take two leading CMSs and compare them side by side. We will compare [Wordpress](http://www.wordpress.com) to [Agility CMS](http://www.agilitycms.com/?source=imran).
 
@@ -169,4 +162,4 @@ That’s why more web developers are switching to headless offerings like Agilit
 
 #### You can start with trying [Agility CMS for FREE](https://account.agilitycms.com/sign-up?product=agility-free&source=imran) here and follow their tutorial to spin off a JAMStack site.
 
-![agility vs wordpress devhoot](/assets/img/agilitycms/wordpress-vs-agility1.jpg)
+![agility vs wordpress devhoot](https://d33wubrfki0l68.cloudfront.net/cf6f16be5435657c44b500cde8c35f50e4e29bad/21e99/assets/img/agilitycms/wordpress-vs-agility1.jpg)

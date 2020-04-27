@@ -7,10 +7,14 @@ image: img/reactGhub.jpeg
 date: '2018-12-13T15:11:55.000Z'
 draft: false
 ---
+## Table of Contents
 
-Now, there are a lot of tutorials :notebook: out there which teach you how to do exactly that. But there are some quirks :hear_no_evil: involved which you might not be able to solve if you are new to gh-pages and or GitHub and or React.js and or to the enitre web development thing! :baby: . When the first time I wished to try gh-pages for my react sites, I followed a few tutorials & guides but had to give up after a few failed attempts :dizzy_face: . It's not that the tutorials were wrong, it's just that they didn't address & explain the hidden quirks very well.
+```toc
+```
 
-After a while I somehow figured it out :sunglasses: and felt the need to jot it down in order to save hassle for others. In this tutorial first we are going to create a React.js site with **create-react-app**, then we are going to configure gh-pages to host it GitHub and then finally deploy it on GitHub. :sparkles: :sparkles:
+Now, there are a lot of tutorials out there which teach you how to do exactly that. But there are some quirks involved which you might not be able to solve if you are new to gh-pages and or GitHub and or React.js and or to the enitre web development thing! When the first time I wished to try gh-pages for my react sites, I followed a few tutorials & guides but had to give up after a few failed attempts . It's not that the tutorials were wrong, it's just that they didn't address & explain the hidden quirks very well.
+
+After a while I somehow figured it out and felt the need to jot it down in order to save hassle for others. In this tutorial first we are going to create a React.js site with **create-react-app**, then we are going to configure gh-pages to host it GitHub and then finally deploy it on GitHub.
 
 Alright! so let's get started.
 
@@ -48,7 +52,7 @@ To deploy our site on GitHub we just have to compile all the React code and plac
 $ npm run build
 ```
 
-Now we have a production build ready to be deployed. :ok_hand:
+Now we have a production build ready to be deployed.
 
 # Configure gh-pages
 
@@ -84,7 +88,7 @@ This is necessary as for **gh-pages** to identify which repo to use as a **targe
 
 > _Note_: The url which you added as a remote is the url of the master branch of your repository.
 
-Now, move into the :point_right: **package.json** file and add the following scripts above all other:
+Now, move into the **package.json** file and add the following scripts above all other:
 
 ```json
 
@@ -95,7 +99,7 @@ Now, move into the :point_right: **package.json** file and add the following scr
 
 ```
 
-_Note_ : Here focus :eyes: on the deploy command. This says to gh-pages with the -b flag that our master branch will be used to deploy with the -d flag, the build folder which has our compiled, production ready code. The **"-b master"** is necessary as gh-pages by default deploys to the gh-pages branch. Even if you don't have one in your repository it will create one for you and then use it for the deployment process. Now you'll wonder :confused: what's wrong in deploying to the **gh-pages** branch. So remember which url we added as a remote for our local repo? It was the master branch's url. All the branches on GitHub have different URLs. Similarly, the default gh-pages url has a different url than the master branch. In our case it's [https://github.com/your-username/github-hosted-react-site/tree/gh-pages](#) . So if you don't include the **-b master** thing in the deploy field you'll see a 404 once you deploy as the gh-pages is deploying on the gh-pages branch while the site url is of the master branch. So it's like aiming at one thing & shooting :gun: at other.
+_Note_ : Here focus on the deploy command. This says to gh-pages with the -b flag that our master branch will be used to deploy with the -d flag, the build folder which has our compiled, production ready code. The **"-b master"** is necessary as gh-pages by default deploys to the gh-pages branch. Even if you don't have one in your repository it will create one for you and then use it for the deployment process. Now you'll wonder what's wrong in deploying to the **gh-pages** branch. So remember which url we added as a remote for our local repo? It was the master branch's url. All the branches on GitHub have different URLs. Similarly, the default gh-pages url has a different url than the master branch. In our case it's [https://github.com/your-username/github-hosted-react-site/tree/gh-pages](#) . So if you don't include the **-b master** thing in the deploy field you'll see a 404 once you deploy as the gh-pages is deploying on the gh-pages branch while the site url is of the master branch. So it's like aiming at one thing & shooting at other.
 
 > However, in case you want to host your site on the gh-pages branch, just remove the **-b master** part from the deploy field. Also, do not forget to add the url of your gh-pages as a git remote in your local repo. The homepage field remains unchanged.
 
@@ -113,7 +117,7 @@ Then deploy with:
 $ npm run deploy
 ```
 
-And we are done! :smiley: Now your site will be available at [https://your-username.github.io/github-hosted-react-site/](#).
+And we are done! Now your site will be available at [https://your-username.github.io/github-hosted-react-site/](#).
 
 In case this doesn't work for you do let me know in the comments what problem you are facing. I'll try to help if I can.
 

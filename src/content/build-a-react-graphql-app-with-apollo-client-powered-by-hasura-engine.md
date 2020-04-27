@@ -7,17 +7,21 @@ image: img/hasura.png
 date: '2019-01-01T15:11:55.000Z'
 draft: false
 ---
+## Table of Contents
+
+```toc
+```
 
 Hey Amigos! In this tutorial we are going to build a Reactjs todo app which
 will use postgres as a database and graphql as a query language.
 
-We'll be using Auth0 to authenticate users into our app. :sunglasses:
+We'll be using Auth0 to authenticate users into our app.
 
 Here's the complete code for this project, [GitHub Repo](https://github.com/strongSoda/hasura-react-todo). Also here's [The complete working app demo.](https://hasuratodowithapollo.herokuapp.com/)
 
 To follow along you need to have some experience with the React.js library. If you feel rusty here's a great [refresher](https://reactjs.org/docs/hello-world.html).
 
-The tools we will be using might be alien to you so I'll give you a brief overview of them. :ok_hand:
+The tools we will be using might be alien to you so I'll give you a brief overview of them.
 
 ## Tech OverView
 
@@ -35,7 +39,7 @@ A query language for your API. GraphQL is a query language for APIs and a runtim
 
 ### Hasura GrapQl Engine
 
-The Hasura GraphQL Engine is an extremely lightweight, high performance product that gives you instant realtime GraphQL APIs on a Postgres database. This can be used to quickly build new applications on Postgres or fast-track the move to GraphQL for existing applications on Postgres. :+1:
+The Hasura GraphQL Engine is an extremely lightweight, high performance product that gives you instant realtime GraphQL APIs on a Postgres database. This can be used to quickly build new applications on Postgres or fast-track the move to GraphQL for existing applications on Postgres.
 
 It comes with a UI (an API explorer, a phpMyAdmin of sorts for Postgres) that lets you create and view tables on your database and make GraphQL queries using the embedded GraphiQL interface.
 
@@ -56,7 +60,7 @@ People think that you can’t save money and reduce costs with something essenti
 
 ## Let's Get Started
 
-The first step is to host our Hasura GraphQl Engine. We'll host our postgres database on heroku with Hasura graphql engine which gives us Instant Realtime GraphQL on Postgres. This allows us to quickly build a variety of new applications on Postgres. There are a number of ways of doing so, but in this tutorial we are going for the one click deployment. :point_down:
+The first step is to host our Hasura GraphQl Engine. We'll host our postgres database on heroku with Hasura graphql engine which gives us Instant Realtime GraphQL on Postgres. This allows us to quickly build a variety of new applications on Postgres. There are a number of ways of doing so, but in this tutorial we are going for the one click deployment.
 
 <a href="https://heroku.com/deploy?template=https://github.com/hasura/graphql-engine-heroku" data-href="https://heroku.com/deploy?template=https://github.com/hasura/graphql-engine-heroku" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">One Click Hasura Deploy to Heroku</a>
 
@@ -95,7 +99,7 @@ _**todo_id**_ will be the auto-incrememnting integer to store the ids of the tod
 
 ![create table](https://i.imgur.com/W6fa8lA.png)
 
-Phew!!! :relieved: Now that our table is all set up, we need to define some permissions on it regarding which user can access what data or who can do mutations in this table. To do so navigate to your table by clicking on the table name in the left panel, then go to the permissions tab.
+Phew!!! Now that our table is all set up, we need to define some permissions on it regarding which user can access what data or who can do mutations in this table. To do so navigate to your table by clicking on the table name in the left panel, then go to the permissions tab.
 
 Now follow the following steps:
 
@@ -119,7 +123,7 @@ Now follow the following steps:
 
 ![adding permissions](https://cdn-images-1.medium.com/max/1750/1*98HSDzrNrIFu55YjQIe9lQ.png)
 
-Kudos! :raised_hands: on making it so far. Now, our backend is all set up. Notice that we didn't need to write a single line of code. This is what the Hasura GraphQl Engine brings on the table. Before moving forward relax and take a few deep breaths, things are going to get real interesting mama!
+Kudos! on making it so far. Now, our backend is all set up. Notice that we didn't need to write a single line of code. This is what the Hasura GraphQl Engine brings on the table. Before moving forward relax and take a few deep breaths, things are going to get real interesting mama!
 
 Next we need to build our front-end in React.js. But, before that I'll recommend you to gain some basic understanding of writing queries in GraphQl. [Learn GraphQl](https://graphql.org/learn/)
 
@@ -127,7 +131,7 @@ Next we need to build our front-end in React.js. But, before that I'll recommend
 
 > **Note:** Make sure to have [node.js](https://nodejs.org/en/) installed on your machine. We won't be using node, but we need npm which comes packaged in node.js to install & manage our project dependencies.
 
-Before diving in to build our react app we need to define the component tree. :palm_tree:
+Before diving in to build our react app we need to define the component tree.
 
 - the `App` component will be the parent component which'll wrap all other components. It is responsible for rendering the `NavBar` and the `home` component when user is logged in.
 
@@ -299,7 +303,7 @@ import createHistory from 'history/createBrowserHistory';
 export default createHistory();
 ```
 
-We are using the `history` module which is a JavaScript library that lets you easily manage session history anywhere JavaScript runs. `history` abstracts away the differences in various environments and provides a minimal API that lets you manage the history stack, navigate, confirm navigation, and persist state between sessions. :dizzy_face:
+We are using the `history` module which is a JavaScript library that lets you easily manage session history anywhere JavaScript runs. `history` abstracts away the differences in various environments and provides a minimal API that lets you manage the history stack, navigate, confirm navigation, and persist state between sessions.
 
 But in order to do that we need to install it in our project:
 
@@ -635,8 +639,6 @@ Hasura gives you granular access controls for every field in your GraphQL schema
 
 **While developing**, we send variables directly as request headers.
 
-![hasura flow](https://docs.hasura.io/1.0/_images/dev-mode-role-header-access-key1.png)
-
 But, while in production mode our application is deployed it can’t send these authorization variables directly!
 
 Our app can send authorization tokens, cookies, etc. We can handle these either by setting up a webhook or by using JWT. In this tutorial I am gonna show you how to do it with webhook.
@@ -661,7 +663,7 @@ Now, that our webhook is all setup open it up by clicking show in the top left o
 
 Now go to the hasura engine project dashboard on heroku and navigate to settings. Here add a new field of `HASURA_GRAPHQL_AUTH_HOOK` and in it's value type `url-of-your-webhook-that-you-copied/auth0/webhook` then click add.
 
-There's one more thing to note here, that using a webhook on hasura engine for access control requires, an `access-key` to be setup. So in the config vars add another field `HASURA_GRAPHQL_ACCESS_KEY` and give it any value which you can remember, say `mysecretkey` :no_mouth: then hit add. Okay now you're all setup.
+There's one more thing to note here, that using a webhook on hasura engine for access control requires, an `access-key` to be setup. So in the config vars add another field `HASURA_GRAPHQL_ACCESS_KEY` and give it any value which you can remember, say `mysecretkey` then hit add. Okay now you're all setup.
 
 ![hasura config vars](https://i.imgur.com/W33Fk0c.png)
 
@@ -669,8 +671,8 @@ There's one more thing to note here, that using a webhook on hasura engine for a
 
 So now what'll happen is our app will send all requests along with headers to the deployed webhook on glitch which will then interpret those and pass on to our Hasura Engine on Heroku which will then take care of every action.
 
-Thats it! :grinning: Fire up your server and see your app live on `localhost:3000` . :wink:
+Thats it! Fire up your server and see your app live on `localhost:3000` .
 
-In case of any query or errata do let me know in the comments sections below. :point_down:
+In case of any query or errata do let me know in the comments sections below.
 
 > **Note:** This todo app works good on Chrome & Edge but there's a chance that it might not work on mozilla firefox, due to a known issue in auth0. To stay updated on whether the issue is resolved or not [go here](https://github.com/auth0/auth0.js/issues/655).
